@@ -35,6 +35,10 @@ header {
     font-size: 1.6rem;
 }
 
+.fname, .lname {
+    white-space: nowrap;
+}
+
 @media only screen 
 and (max-width: 860px) {
     header {
@@ -75,9 +79,44 @@ and (max-width: 610px) {
 /* ------------------------------------------------- */
 
 .about-me {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 0 0;
     height: 100vh;
     background-color: var(--primary-color-light);
+    color: var(--letter-color-light);
 }
+
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 25px;
+    max-width: 650px;
+    text-align: center;
+}
+
+.about-me h2 {
+    margin: 30px 0;
+    font-size: 3.4rem;
+}
+
+.about-me p {
+    font-size: 1.4rem;
+}
+
+@media only screen 
+and (max-width: 480px) {
+    .about-me h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-me p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ------------------------------------------------- */
 
 
 
@@ -88,12 +127,7 @@ and (max-width: 610px) {
     color: var(--secondary-color);
 }
 
-.fname > .letter {
-    display: inline-block;
-    transition: transform 0.4s ease;
-}
-
-.lname > .letter {
+.fname > .letter, .lname > .letter {
     display: inline-block;
     transition: transform 0.4s ease;
 }
